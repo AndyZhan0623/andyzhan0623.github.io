@@ -1,0 +1,21 @@
+.chip-button{
+    width: 107.5px;
+    height: 107.5px;
+    background-image: url("../img/five-chip-copy.webp");
+    background-size: 400px 250px;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    color: yellow;
+}
+.white-chip { background-position: -79.25px -119.75px; }
+.red-chip   { background-position: -213.75px -121.25px; }
+.green-chip { background-position: -271px -14.75px; }
+.black-chip { background-position: -144px -14px; }
+.blue-chip  { background-position: -22px -13px; }
+div.bet {
+    display: flex;
+    flex-wrap : wrap;
+    justify-content : space-evenly;
+    align-items : center;
+}

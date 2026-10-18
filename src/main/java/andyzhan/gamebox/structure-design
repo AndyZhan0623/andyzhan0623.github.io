@@ -1,0 +1,2 @@
+User is both an entity and a domain model.
+Since it is squarely stored into the database, I allocate it into package "entity".

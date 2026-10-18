@@ -1,0 +1,14 @@
+div.pokerCard{
+    --scale: 1;
+    --card-width: calc( var(--scale) * 83.077px );
+    --card-height: calc( var(--scale) * 109.8px );
+    width: var(--card-width);
+    height: var(--card-height);
+    background-image: url("../../img/all-poker-cards-copy.jpg");
+    background-size: 1080px 549px;
+    background-size: no-repeat;
+    border: none;
+    --x: 0;
+    --y: 0;
+    background-position: calc(var(--x) * var(--card-width) * -1) calc(var(--y) * var(--card-height) * -1);
+}

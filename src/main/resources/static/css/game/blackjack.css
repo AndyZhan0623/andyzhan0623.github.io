@@ -1,0 +1,12 @@
+div.blackjack{}
+
+div.blackjack div.deck{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+div.blackjack div.choiceButton{
+    display: flex;
+    justify-content: flex-end;
+}
