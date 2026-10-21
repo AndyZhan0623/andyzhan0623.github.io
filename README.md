@@ -1,6 +1,6 @@
 # Game Box
 
-This is a web application of a game box in which a user can play several games. I intend to make this a game platform in which multiple users can play and interact in the same game, but I have not learned how the server can actively communicate with the clients. I believe that I can achieve the goal in the future with WebSocket. 
+This is a web application with a stateless server of a game box in which a user can play several games. I intend to make this a game platform in which multiple users can play and interact in the same game, but I have not learned how the server can actively communicate with the clients. I believe that I can achieve the goal in the future with WebSocket. 
 
 # Games
 
@@ -15,31 +15,29 @@ Flip Stud 2
 Java 17
 Maven
 
-Installation
+# Installation
 
 Clone the repository:
 
-git clone <repository-url>
+<code> git clone <https://github.com/AndyZhan0623/andyzhan0623.github.io> </code>
 
 Open the project in your IDE or navigate to the project directory.
 
 Install dependencies and build the project using the appropriate build tool.
 
-Usage
+# Usage
 
-Explain how to run the project and provide examples of common operations.
+Operate the main method in GameboxApplication to start the whole thing.
 
-# Example command
+# Architecture
 
-Architecture
+Domain : The absolute core component of the project. All logic and rules of a game are implemented here. Other components invoke APIs in domain. 
 
-Describe the main components of the project and their responsibilities.
+Infrastructure : This component is responsible for the persistence of various game data. I plan to make feature "game history" for users by taking advantage of this. Additionally, since the server of this project would be stateless, it is necessary to record and update these data frequently so the server knows what is happening.
 
-Component A: Responsible for ...
+Input/Output : This component is responsible for connecting Domain to the webpage which users interact with. There are two layers in this component. The inside layer, which includes services and controllers, plugs the outside inputs into the Domain APIs and returns the snapshot of the game to the front-end, while the outside layer, which is the front-end, grabs this snapshot and generate appropriate UI to users for further interaction. 
 
-Component B: Responsible for ...
-
-Component C: Responsible for ...
+Authentication : This component is responsible for the authentication of a user. 
 
 # Project Structure
 
@@ -61,7 +59,3 @@ Explain how to run the tests.
 AndyZhan0623
 
 # License
-
-
-
-Specify the project's license, if applicable.
