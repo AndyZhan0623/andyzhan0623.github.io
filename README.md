@@ -52,7 +52,7 @@ andyzhan.gamebox/
 
 # Development History: Introduction
 
-This is not a log of how I built the project. This is a general history of how a console program in old Eclipse would evolve into a web software. This reflects my thought process along the way this project evolves. More than a development history of the project itself, it is a development history of my understandings of computer programming. To see more information, please check.
+This is not a log of how I built the project. This is a record of how the project evolved from a console-based program into a web application. This reflects my thought process along the way this project evolves. More than a development history of the project itself, it is a development history of my understandings of computer programming. To see what the history exactly is, please check.
 
 # Contributors
 
