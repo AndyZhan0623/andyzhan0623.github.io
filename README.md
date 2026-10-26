@@ -49,9 +49,10 @@ andyzhan.gamebox/
         
 └── README.md
 ```
-Testing
 
-Explain how to run the tests.
+# Development History: Introduction
+
+This is not a log of how I built the project. This is a general history of how a console program in old Eclipse would evolve into a web software. This reflects my thought process along the way this project evolves. More than a development history of the project itself, it is a development history of my understandings of computer programming. To see more information, please check.
 
 # Contributors
 
