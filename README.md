@@ -42,14 +42,13 @@ Authentication : This component is responsible for the authentication of a user.
 # Project Structure
 
 Briefly explain the purpose of the main directories and files.
-
+```
 andyzhan.gamebox/
 ├── src/
-│   ├── main/
-│   └── test/
-├── README.md
-└── ...
-
+│   └── main/
+        
+└── README.md
+```
 Testing
 
 Explain how to run the tests.
@@ -57,5 +56,3 @@ Explain how to run the tests.
 # Contributors
 
 AndyZhan0623
-
-# License
