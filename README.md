@@ -52,7 +52,7 @@ andyzhan.gamebox/
 
 # Development History: Introduction
 
-This is not a log of how I built the project. This is a record of how the project evolved from a console-based program into a web application. This reflects my thought process along the way this project evolves. More than a development history of the project itself, it is a development history of my understandings of computer programming. To see what the history exactly is, please check <p style="color:blue">Development History.md</p> in the same folder.
+This is not a log of how I built the project. This is a record of how the project evolved from a console-based program into a web application. This reflects my thought process along the way this project evolves. More than a development history of the project itself, it is a development history of my understandings of computer programming. To see what the history exactly is, please check <p>Development History.md</p> in the same folder.
 
 # Contributors
 
