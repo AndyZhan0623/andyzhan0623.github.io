@@ -183,7 +183,6 @@ After learning the basic syntax of Java, along with classes, loops, and conditio
 		System.out.print("\n你的余额是： "+x1.chip);
 		andySc2.close();
 	}
-  ```
 </details>
 
 # Version 2: Front-end UI
