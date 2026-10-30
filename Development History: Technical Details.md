@@ -8,6 +8,9 @@ To make these variables accessible to the other methods, I apparently have to pa
 
 Fortunately, I had a solution: just pack everything up and take it along. I created another class and stuffed all the variables into it. Thanks to Java's pass-by-value, I didn't even need these methods to return anything. I could simply pass this "wrapper" object from one method to another.
 
+<img width="1916" height="1142" alt="image" src="https://github.com/user-attachments/assets/f90277f5-56c2-4740-ae2c-61bea81bb7d7" />
+
+
 Looking back, I realize that, in a sense, I had already begun to encounter the concept of context.
 
 # A Little Detour into “Pass-by-Value”
