@@ -4,6 +4,10 @@ The project can be roughly divided into three stages in chronological order. At 
 # Version 1: Console Program
 After learning the basic syntax of Java, along with classes, loops, and conditions, I began trying to recreate Blackjack on my school computer. The initial version was very crude and rudimentary, with all of the game logic crammed into a single method and various nested loops and conditional statements. The only object used at runtime was ```PokerCard```.
 
+<details>
+  <summary>Click here to see the source code of V1</summary>
+</details>
+
 # Version 2: Front-end UI
 
 Dissatisfied with the rather rudimentary input and output capabilities of Java's console, I saw two possible ways to implement a graphical interface: using Java APIs such as Swing and JavaFX, or integrating a web interface with HTML, CSS, and JavaScript for front-end interaction. Since I already had a basic understanding of HTML, CSS, and JavaScript at the time, and a local application was not ambitious enough for me, I decided to switch to IntelliJ IDEA and learn Spring Boot. (The version of Eclipse on my school computer did not have the Maven plugin, making Spring Boot configuration difficult.)
