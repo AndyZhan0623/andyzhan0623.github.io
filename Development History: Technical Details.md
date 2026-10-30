@@ -49,11 +49,11 @@ In my design, each stage of Blackjack can be thought of as a section of the rail
 
 But I soon ran into another problem: if the game logic was delegated to these individual "bidding companies," how would Blackjack know what to do next once one of them had finished its job?
 
-Although the Blackjack engine coordinates the various Mechanics, it has no knowledge of what each Mechanic is actually doing internally. Given that, each Mechanic should send a signal to Blackjack upon completion, letting it know which Mechanic to invoke next.
+Although the Blackjack engine coordinates the various Mechanics, it has no idea of what each Mechanic is doing internally. Given that, each Mechanic should send some kind of signal to Blackjack upon completion, letting it know which Mechanic to invoke next.
 
-In other words, the game context needs a field indicating which stage Blackjack is currently in.
+In other words, the ```GameContext``` needs a field indicating which stage Blackjack is currently in.
 
-Only later did I learn that this kind of "signal" is what we call a system's state, and that the design I had come up with essentially formed a state machine.
+Only later did I learn that this kind of "signal" is what we call the state of a system, and that the design I had come up with essentially formed a state machine.
 
 # ```Card``` & ```BetCarrier```
 
