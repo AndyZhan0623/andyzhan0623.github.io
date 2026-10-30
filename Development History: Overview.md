@@ -7,7 +7,7 @@ After learning the basic syntax of Java, along with classes, loops, and conditio
 <details>
   <summary>Click here to see the source code of V1</summary>
   ```
-  public void blackjack() throws InterruptedException
+	public void blackJackEnglish() throws InterruptedException
 	{
 		X21 x1 = new X21();
 		x1.chip = 100;
@@ -16,8 +16,8 @@ After learning the basic syntax of Java, along with classes, loops, and conditio
 		{
 			double chip0 = 100;
 			retry=0;
-			System.out.println("\n欢迎游玩21点！");
-			System.out.println("每次开始游玩，您都将获得100的启动资金");
+			System.out.println("\nWelcome to play Blackjack!");
+			System.out.println("You'll get 100 chip every time you begin.");
 			x1.chip =100;
 			int replay = 1;
 			while(replay==1)
@@ -26,11 +26,11 @@ After learning the basic syntax of Java, along with classes, loops, and conditio
 				x1.chip = chip0;
 				x1.cardsOut = new ArrayList<>();
 				replay=0;
-				System.out.print("请下注： ");
+				System.out.print("Place your bet： ");
 				x1.bet[0] = andySc2.nextDouble();
 				while(x1.bet[0]>x1.chip||x1.bet[0]<=0)
 				{
-					System.out.print("\n请重新下注： ");
+					System.out.print("\nPlease place your bet seriously： ");
 					x1.bet[0] = andySc2.nextDouble();
 				}
 				x1.chip-=x1.bet[0];
@@ -49,12 +49,12 @@ After learning the basic syntax of Java, along with classes, loops, and conditio
 				Mfor21.uHaveA(x1, x1.t, x1.u2[x1.t]);
 				Mfor21.softenU(x1, x1.t);
 				
-				Mfor21.showOut(x1, x1.t);//Displaying the initial situation;
+				Mfor21.showOutEng(x1, x1.t);//Displaying the initial situation;
 				
 				if(x1.z1.paiMianRand==12&&x1.chip>=x1.bet[0]/2)
 				{
 					Thread.sleep(1000);
-					System.out.print("\n是否购买保险？购买请按1： ");
+					System.out.print("\nPress 1 to buy insurance： ");
 					int insurance = andySc2.nextInt();
 					if(insurance==1) Mfor21.insuranceM(x1);
 				}
@@ -63,12 +63,15 @@ After learning the basic syntax of Java, along with classes, loops, and conditio
 				int showZ2 = 0;
 				if(x1.dSum!=21)
 				{
-					Thread.sleep(1000);
-					if(x1.z1.paiMianRand==12) System.out.println("\n庄家并非21点");
+					if(x1.z1.paiMianRand==12) 
+					{
+						Thread.sleep(1000);
+						System.out.println("\nDealer doesn't get blackjack.");
+					}
 					if(x1.u1[0].paiMianRand==x1.u2[0].paiMianRand&&x1.chip>=x1.bet[0])
 					{
 						Thread.sleep(1000);
-						System.out.print("\n是否分牌？分牌请按1： ");
+						System.out.print("\nPress 1 to split： ");
 						split = andySc2.nextInt();
 						if(split==1)
 						{
@@ -86,15 +89,15 @@ After learning the basic syntax of Java, along with classes, loops, and conditio
 						
 						if(split==1)
 						{
-							System.out.print("\n第"+(i+1)+"局： ");
-							Mfor21.showOut(x1,i);
+							System.out.print("\nRound "+(i+1)+":");
+							Mfor21.showOutEng(x1,i);
 						}
 						
 						int doubleDown = 0;
 						if(x1.chip>=x1.bet[i])
 						{
 							Thread.sleep(1000);
-							System.out.print("\n是否双倍下注？双倍下注请按2： ");
+							System.out.print("\nPress 2 to double down： ");
 							doubleDown = andySc2.nextInt();
 							if(doubleDown==2)
 							{
@@ -102,19 +105,19 @@ After learning the basic syntax of Java, along with classes, loops, and conditio
 								x1.bet[i]*=2;
 								x1.h = new SuiJiPai();
 								Mfor21.hitU(x1,i);
-								Mfor21.showUHit(x1, i, x1.h);
+								Mfor21.showUHitEng(x1, i, x1.h);
 							}
 						}
 						
 						if(doubleDown!=2)
 						{
-							System.out.print("\n是否加牌？加牌请按1： ");
+							System.out.print("\nPress 1 to hit： ");
 							int toHit = andySc2.nextInt();
 							while(toHit==1)
 							{
 								x1.h = new SuiJiPai();
 								Mfor21.hitU(x1,i);
-								Mfor21.showUHit(x1,i,x1.h);
+								Mfor21.showUHitEng(x1,i,x1.h);
 								if(x1.uBust[i]==1) toHit = 0;
 								else toHit = andySc2.nextInt();														
 							}
@@ -138,12 +141,12 @@ After learning the basic syntax of Java, along with classes, loops, and conditio
 				if(showZ2==1)
 				{
 					Thread.sleep(1000);
-					System.out.print("\n总和："+x1.dSum+"--"+x1.z2.suiJiPai);
+					System.out.print("\nSum："+x1.dSum+"--"+x1.z2.suiJiPai);
 					while(x1.dSum<17&&x1.jackpotU!=1)
 					{
 						x1.h = new SuiJiPai();
 						Mfor21.hitD(x1);
-						Mfor21.showDHit(x1, x1.h);
+						Mfor21.showDHitEng(x1, x1.h);
 					}
 				}
 				
@@ -154,33 +157,31 @@ After learning the basic syntax of Java, along with classes, loops, and conditio
 				{
 					if(split==1)
 					{
-						Thread.sleep(1000);
-						System.out.print("\n\n第"+(i+1)+"局： ");
+						System.out.print("\n\nRound "+i+1+":");
 					}
 					Mfor21.resulting(x1, i);
-					Mfor21.showResult(x1,i);
+					Mfor21.showResultEng(x1,i);
 				}
 				
-				System.out.print("\n\n当前筹码： "+x1.chip);
+				Thread.sleep(1000);
+				System.out.print("\n\nChip： "+x1.chip);
 				
 				if(x1.chip==0)
 				{
 					replay=0;
-					Thread.sleep(1000);
-					System.out.print("\n你输光了钱");
+					System.out.print("\nYou lose all the money.");
 				}
 				else
 				{
 					chip0 = x1.chip;
-					System.out.print("\n是否继续游戏？继续请按1: ");
+					System.out.print("\nPress 1 to continue: ");
 					replay = andySc2.nextInt();
 				}
 			}
-			Thread.sleep(1000);
-			System.out.print("\n是否重新开始？重新开始请按1： ");
+			System.out.print("\nRetry? Press 1 to do so： ");
 			retry = andySc2.nextInt();
 		}
-		System.out.print("\n你的余额是： "+x1.chip);
+		System.out.print("\nThe money you left： "+x1.chip);
 		andySc2.close();
 	}
 </details>
