@@ -6,7 +6,8 @@ After learning the basic syntax of Java, along with classes, loops, and conditio
 
 <details>
   <summary>Click here to see the source code of V1</summary>
-  public void blackJackEnglish() throws InterruptedException
+	
+  	public void blackJackEnglish() throws InterruptedException
 	{
 		X21 x1 = new X21();
 		x1.chip = 100;
