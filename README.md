@@ -46,10 +46,24 @@ Authentication : This component is responsible for the authentication of a user.
 Briefly explain the purpose of the main directories and files.
 ```
 andyzhan.gamebox/
-├── src/
-│   └── main/
+        domain
+                game // All games and game-related stuff;
+                        blackjack
+                        card
+                                Card
+                                PokerCard
+                        Deck
+                        Hand
+        infrastructure
+                database
+                        converter // Converts the id between the type in the database and the type of the id field;
+                        entity // All entities;
+                        id // Value object id, used by GameContext, BlackjackPlayer, etc objects that may be searched directly. The value inside is still Long;
+                        mapper // Converts between the domain object and the entity;
+                        repository // JpaRepository
+        service // Invokes the methods in domain or infrastructure to handle requests indirectly
+        controller // Windows that directly handle the request. Invokes methods in services.
         
-└── README.md
 ```
 
 # Development History: Introduction
