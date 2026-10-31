@@ -55,7 +55,11 @@ andyzhan.gamebox/
 # Development History: Introduction
 
 This is not a log of how I built the project. This is a record of how the project evolved from a console-based program into a web application. This reflects my thought process along the way this project evolves. More than a development history of the project itself, it is a development history of my understandings of computer programming. To see what the history exactly is, please check 
-<a href="www.github.com/AndyZhan0623/andyzhan0623/github.io/main/Development%20History:%20Overview.md">Development History: Overview</a>
+<div>
+        <a href="https://github.com/AndyZhan0623/andyzhan0623.github.io/blob/main/Development%20History%3A%20Overview.md">Development History: Overview</a>
+        <a href="https://github.com/AndyZhan0623/andyzhan0623.github.io/blob/main/Development%20History%3A%20Technical%20Details.md">Development History: Technical Details</a>
+</div>
+
 
 # Contributors
 
