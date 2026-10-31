@@ -5,6 +5,8 @@ This is a web application with a stateless server of a game box in which a user 
 # Games
 
 Blackjack
+<img width="1885" height="921" alt="image" src="https://github.com/user-attachments/assets/1956a80a-3832-4d8b-af5d-d58885478ac7" />
+
 
 Flip Stud 
 
